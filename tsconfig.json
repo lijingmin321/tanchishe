@@ -1,0 +1,32 @@
+{
+  // ts编译器的配置文件
+  // 编译器选项：决定了编译器怎么对文件编译
+  "compilerOptions": {
+    // 编译ts到Es的目标版本： es3(默认情况)若不配置则编译成ES3版本，
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    // 模块： 指定要使用额模块话的规范
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "strictNullChecks": true,
+    // "noImplicitAny": true, //不能使用any类型
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    // lib 用来指定使用的库
+    "lib": ["esnext", "dom"],
+    // 将编译好的文件放在distTs文件夹下， 将js与ts分开
+    // "outDir": "./distTs",
+    // 将代码合并为一个文件： 设置outFile后，所有的全局作用域中的代码会合并到同一个文件中，
+    // 若有模块使用其module:'system | amd',一般不使用，没有使用场景
+    // "outFile": "./distTs/app.js"
+  },
+  // 包含
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "ts/*.ts","type-challenges/**/*.ts"],
+  // "exclude": [],
+  // 与include类似  但是其是指某个具体的文件，需要编译的文件较少时使用
+  // "files":[],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

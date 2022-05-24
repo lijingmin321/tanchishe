@@ -1,0 +1,33 @@
+@import './var.less';
+
+.cell-wrapper{
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    box-sizing: border-box;
+    // border: 1px solid;
+    text-align: center;
+    &.food{
+        background-color: @bg-color;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        &>div{
+            width: 4px;
+            height: 4px;
+            background-color: @black-color;
+            transform: rotate(45deg);
+        }
+    }
+    &.head{
+        background-color: red;
+        border: 1px solid @bg-color;
+    }
+
+    &.body{
+        background-color: @black-color;
+        border: 1px solid @bg-color;
+    }
+}
